@@ -1,0 +1,326 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.lj</groupId>
+  <artifactId>day04</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  
+  <properties>
+  	<!-- 基本 -->
+  	<mysql>5.1.43</mysql>
+  	<servlet>3.1.0</servlet>
+  	<jsp>2.2</jsp>
+  	<jstl>1.2</jstl>
+  	<fastjson>1.2.58</fastjson>
+
+  	<!-- 打印日志 -->
+  	<log4j>1.2.17</log4j>
+  	<log4japi>2.9.0</log4japi>
+  	<log4jcore>2.9.0</log4jcore>
+  	<slf4j>1.7.25</slf4j>
+  	<logging>1.2</logging>
+  	
+  	<!-- 连接池 -->
+  	<c3p0>0.9.5.2</c3p0>
+  	<dbcp>1.4</dbcp>
+  	
+  	<!-- io -->
+  	<upload>1.3.3</upload>
+  	<io>2.2</io>
+  	
+  	<!-- beanutils -->
+  	<beanutils>1.9.3</beanutils>
+  	<!-- 邮件 -->
+  	<activation>1.0.2</activation>
+  	<mail>1.4.7</mail>
+  	
+  	
+  	<!-- mybatis -->
+  	<mybatis>3.3.0</mybatis>
+  	<mybatis_spring>1.3.1</mybatis_spring>
+  	<javassist>3.22.0-CR2</javassist>
+  	<cglib>3.2.5</cglib>
+  	
+  	<!-- spring -->
+  	<spring>5.1.2.RELEASE</spring>
+  	<aopalliance>1.0</aopalliance>
+  	
+  	<!-- spring验证 -->
+  <!-- 	<classmate>1.0.0</classmate>
+  	<jboss>3.1.3.GA</jboss>
+  	<validation>1.1.0.Final</validation> -->
+  	<hibernate_validator>5.1.3.Final</hibernate_validator>
+  	
+  	<!-- 分页 -->
+  	<pagehelper>5.1.8</pagehelper>
+  	<jsqlparser>0.9.5</jsqlparser>
+  	
+  	<!-- 单元测试和ognl -->
+  	<ognl>3.1.15</ognl>
+  	<junit>4.9</junit>
+  </properties>
+  
+  <dependencies>
+  	<!-- mysql -->
+  	<dependency>
+    	<groupId>mysql</groupId>
+    	<artifactId>mysql-connector-java</artifactId>
+    	<version>${mysql}</version>
+	</dependency>
+	<!-- jstl -->
+	<dependency>
+    	<groupId>jstl</groupId>
+    	<artifactId>jstl</artifactId>
+    	<version>${jstl}</version>
+	</dependency>
+	  <!--  servlet -->
+	  <dependency>
+	    <groupId>javax.servlet</groupId>
+	    <artifactId>javax.servlet-api</artifactId>
+	    <version>${servlet}</version>
+	    <scope>provided</scope>
+	  </dependency>
+	  <!-- jsp -->
+	  <dependency>
+	    <groupId>javax.servlet.jsp</groupId>
+	    <artifactId>jsp-api</artifactId>
+	    <version>${jsp}</version>
+	    <scope>provided</scope>
+	</dependency>
+	<!-- fastjson -->
+	<dependency>
+   		<groupId>com.alibaba</groupId>
+    	<artifactId>fastjson</artifactId>
+    	<version>${fastjson}</version>
+	</dependency>
+	
+	
+	
+	<!-- c3p0 -->
+	<dependency>
+	    <groupId>com.mchange</groupId>
+	    <artifactId>c3p0</artifactId>
+	    <version>${c3p0}</version>
+	</dependency>
+	<dependency>
+	    <groupId>com.mchange</groupId>
+	    <artifactId>mchange-commons-java</artifactId>
+	    <version>0.2.11</version>
+	</dependency>
+	
+	<!-- log4j -->
+	<dependency>
+	    <groupId>log4j</groupId>
+	    <artifactId>log4j</artifactId>
+	    <version>${log4j}</version>
+	</dependency>
+	<!-- log4japi -->
+	<dependency>
+    	<groupId>org.apache.logging.log4j</groupId>
+	   	<artifactId>log4j-api</artifactId>
+	    <version>${log4japi}</version>
+	</dependency>
+	<!-- log4jcore -->
+	<dependency>
+	    <groupId>org.apache.logging.log4j</groupId>
+	    <artifactId>log4j-core</artifactId>
+	    <version>${log4jcore}</version>
+	</dependency>
+	<!-- slf4j -->
+	<dependency>
+    	<groupId>org.slf4j</groupId>
+   	 	<artifactId>slf4j-api</artifactId>
+    	<version>${slf4j}</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.slf4j</groupId>
+	    <artifactId>slf4j-log4j12</artifactId>
+	    <version>${slf4j}</version>
+    	<scope>test</scope>
+	</dependency>
+	<!-- logging -->
+	<dependency>
+	    <groupId>commons-logging</groupId>
+	    <artifactId>commons-logging</artifactId>
+	    <version>${logging}</version>
+	</dependency>
+	
+	<!-- io -->
+	<dependency>
+	    <groupId>commons-fileupload</groupId>
+	    <artifactId>commons-fileupload</artifactId>
+	    <version>${upload}</version>
+	</dependency>
+	<dependency>
+	    <groupId>commons-io</groupId>
+	    <artifactId>commons-io</artifactId>
+	    <version>${io}</version>
+	</dependency>
+	
+	<!-- mail -->
+	<dependency>
+	    <groupId>javax.mail</groupId>
+	    <artifactId>mail</artifactId>
+	    <version>${mail}</version>
+	</dependency>
+	<dependency>
+	    <groupId>activation</groupId>
+	    <artifactId>activation</artifactId>
+	    <version>${activation}</version>
+	</dependency>
+	
+	<!-- dbcp -->
+	<dependency>
+	    <groupId>commons-dbcp</groupId>
+	    <artifactId>commons-dbcp</artifactId>
+	    <version>${dbcp}</version>
+	</dependency>
+	
+	<!-- beanutil -->
+	<dependency>
+    	<groupId>commons-beanutils</groupId>
+    	<artifactId>commons-beanutils</artifactId>
+    	<version>${beanutils}</version>
+	</dependency>
+	
+	<!-- mybatis -->
+	<dependency>
+	    <groupId>org.mybatis</groupId>
+	    <artifactId>mybatis-spring</artifactId>
+	    <version>${mybatis_spring}</version>
+	</dependency>
+	<!-- cglib -->
+	<dependency>
+	    <groupId>cglib</groupId>
+	    <artifactId>cglib</artifactId>
+	    <version>${cglib}</version>
+	</dependency>
+  	<!-- mybatis -->
+  	<dependency>
+  		<groupId>org.mybatis</groupId>
+  		<artifactId>mybatis</artifactId>
+  		<version>${mybatis}</version>
+  	</dependency>
+  	<!-- javassist -->
+  	<dependency>
+	    <groupId>org.javassist</groupId>
+	    <artifactId>javassist</artifactId>
+	    <version>${javassist}</version>
+	</dependency>
+	
+	<!-- spring -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-context</artifactId>
+	    <version>${spring}</version>
+	</dependency>
+	<dependency>
+  		<groupId>org.springframework</groupId>
+  		<artifactId>spring-webmvc</artifactId>
+  		<version>${spring}</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.springframework</groupId>
+  		<artifactId>spring-web</artifactId>
+  		<version>${spring}</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.springframework</groupId>
+  		<artifactId>spring-tx</artifactId>
+  		<version>${spring}</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.springframework</groupId>
+  		<artifactId>spring-jdbc</artifactId>
+  		<version>${spring}</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.springframework</groupId>
+  		<artifactId>spring-expression</artifactId>
+  		<version>${spring}</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.springframework</groupId>
+  		<artifactId>spring-core</artifactId>
+  		<version>${spring}</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.springframework</groupId>
+  		<artifactId>spring-beans</artifactId>
+  		<version>${spring}</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.springframework</groupId>
+  		<artifactId>spring-aop</artifactId>
+  		<version>${spring}</version>
+  	</dependency>
+  	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-messaging</artifactId>
+	    <version>${spring}</version>
+	</dependency>
+  	
+  	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-aspects</artifactId>
+	    <version>${spring}</version>
+	</dependency>
+	<dependency>
+  		<groupId>aopalliance</groupId>
+  		<artifactId>aopalliance</artifactId>
+  		<version>${aopalliance}</version>
+  	</dependency>
+	<!-- spring验证 -->
+		
+		 <!-- hibernate_validator -->
+		 <dependency>
+		    <groupId>org.hibernate</groupId>
+		    <artifactId>hibernate-validator</artifactId>
+		    <version>${hibernate_validator}</version>
+		</dependency>
+		
+		<!-- 分页 -->
+		 <dependency>
+	  		<groupId>com.github.pagehelper</groupId>
+	  		<artifactId>pagehelper</artifactId>
+	  		<version>${pagehelper}</version>
+	  	</dependency>
+	  	<dependency>
+	  		<groupId>com.github.jsqlparser</groupId>
+	  		<artifactId>jsqlparser</artifactId>
+	  		<version>${jsqlparser}</version>
+	  	</dependency>
+	  	<!-- 单元测试 -->
+	  	<dependency>
+	   		 <groupId>junit</groupId>
+		    <artifactId>junit</artifactId>
+		    <version>4.12</version>
+		</dependency>
+	    <!-- ognl  -->
+	    <dependency>
+		    <groupId>ognl</groupId>
+		    <artifactId>ognl</artifactId>
+		    <version>${ognl}</version>
+		</dependency>
+	
+	  	
+  </dependencies>
+
+	<build>
+	  <resources> 
+		  	<resource>
+		   		<directory>src/main/java</directory>
+		   	    <includes>
+		   	    	 <include>**/*.xml</include>
+		   	     </includes> 
+		   	</resource> 
+		    <resource> 
+		    	<directory>src/main/resources</directory>
+		    	 <includes>
+					<include>**/*.xml</include> 
+					<include>**/*.properties</include>
+			      </includes>
+			 </resource> 
+	 </resources>  
+          </build>
+</project>
