@@ -5,9 +5,9 @@ import java.util.Map;
 
 public class AsserUitls {
 	/**
-	 * ¶ÏÑÔÎªÕæ
-	 * @param b ´ú±ítrue»òÕßfalse
-	 * @param message ´íÎóÐÅÏ¢
+	 * ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½
+	 * @param b ï¿½ï¿½ï¿½ï¿½trueï¿½ï¿½ï¿½ï¿½false
+	 * @param message ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
 	 */
 	public static void isTrue(boolean b,String message){
 		if(!Boolean.TRUE.equals(b)){
@@ -15,9 +15,9 @@ public class AsserUitls {
 		}
 	}
 	/**
-	 * ¶ÏÑÔÎª¼Ù
-	 * @param exp ´ú±ítrue»òÕßfalse
-	 * @param message ´íÎóÐÅÏ¢
+	 * ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½
+	 * @param exp ï¿½ï¿½ï¿½ï¿½trueï¿½ï¿½ï¿½ï¿½false
+	 * @param message ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
 	 */
 	public static void isFalse(boolean exp,String message){
 		if(Boolean.TRUE.equals(exp)){
@@ -25,9 +25,9 @@ public class AsserUitls {
 		}
 	}
 	/**
-	 * ¶ÏÑÔ²»Îª¿Õ
-	 * @param exp ´ú±í×Ö·û´¦¶ÔÏó
-	 * @param message ´íÎóÐÅÏ¢
+	 * ï¿½ï¿½ï¿½Ô²ï¿½Îªï¿½ï¿½
+	 * @param exp ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * @param message ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
 	 */
 	public static void isNotNull(String exp,String message){
 		if(exp == null || exp.length()==0){
@@ -42,9 +42,9 @@ public class AsserUitls {
 	}
 	
 	/**
-	 * 4.¶ÏÑÔ±ØÐëÎª¿Õ
-	 * @param exp ´ú±í×Ö·û´¦¶ÔÏó
-	 * @param message ´íÎóÐÅÏ¢
+	 * 4.ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½Îªï¿½ï¿½
+	 * @param exp ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * @param message ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
 	 */
 	public static void isNull(String exp,String message){
 		if(exp.length()>0){
@@ -59,9 +59,9 @@ public class AsserUitls {
 	}
 	
 	/**
-	 * ¶ÏÑÔ¼¯ºÏ²»Îª¿Õ
-	 * @param ¼¯ºÏ¶ÔÏó
-	 * @param message ´íÎóÐÅÏ¢
+	 * ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½Ï²ï¿½Îªï¿½ï¿½
+	 * @param ï¿½ï¿½ï¿½Ï¶ï¿½ï¿½ï¿½
+	 * @param message ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
 	 */
 	public static void collectionNotNull(Collection<?> col,String message){
 		if(col == null || col.size()==0){
@@ -70,9 +70,9 @@ public class AsserUitls {
 	}
 	
 	/**
-	 * 6¶ÏÑÔmap¼¯ºÏ²»Îª¿Õ
-	 * @param ¼¯ºÏ¶ÔÏó
-	 * @param message ´íÎóÐÅÏ¢
+	 * 6ï¿½ï¿½ï¿½ï¿½mapï¿½ï¿½ï¿½Ï²ï¿½Îªï¿½ï¿½
+	 * @param ï¿½ï¿½ï¿½Ï¶ï¿½ï¿½ï¿½
+	 * @param message ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
 	 */
 	public static void mapNotNull(Map<?, ?> map,String message){
 		if(map == null || map.size()==0){
@@ -81,7 +81,7 @@ public class AsserUitls {
 	}
 	
 	/**
-	 * ×Ö·û´®±ØÐëÓÐÖµ,È¥µô¿Õ¸ñºó
+	 * ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ,È¥ï¿½ï¿½ï¿½Õ¸ï¿½ï¿½
 	 * 7@param src
 	 * @param message
 	 */
@@ -92,7 +92,7 @@ public class AsserUitls {
 	}
 	
 	/**
-	 * ±ØÐëÊÇÕûÊý´óÓÚ0
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½0
 	 * 8@param src
 	 * @param message
 	 */

@@ -5,13 +5,20 @@ import java.util.HashMap;
 
 import org.junit.Test;
 
-import com.lj.bean.AssertUtils;
-import com.lj.bean.WeiEx;
+import com.wrj.bean.AssertUtils;
+import com.wrj.bean.WeiEx;
 
-public class AssertTest<V> {
+
+
+public class AssertTest{
 	@Test
-	public void isTrue() throws WeiEx{
-		AssertUtils.isTrue(false, "必须为真");
+	public void isTrue(){
+		try {
+			AssertUtils.isTrue(false, "必须为真");
+		} catch (WeiEx e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	@Test
 	public void isTrue2() throws WeiEx{
@@ -83,6 +90,7 @@ public class AssertTest<V> {
 		
 		AssertUtils.sumZhi(25, "必须大于0");
 	}
+	
 	@Test
 	public void num2() throws WeiEx{
 		
