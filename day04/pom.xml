@@ -16,7 +16,7 @@
   	<!-- 打印日志 -->
   	<log4j>1.2.17</log4j>
   	<log4japi>2.9.0</log4japi>
-  	<log4jcore>2.9.0</log4jcore>
+  	<log4jcore>2.13.2</log4jcore>
   	<slf4j>1.7.25</slf4j>
   	<logging>1.2</logging>
   	
