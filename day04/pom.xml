@@ -42,7 +42,7 @@
   	<cglib>3.2.5</cglib>
   	
   	<!-- spring -->
-  	<spring>5.1.2.RELEASE</spring>
+  	<spring>5.2.21.RELEASE</spring>
   	<aopalliance>1.0</aopalliance>
   	
   	<!-- spring验证 -->
